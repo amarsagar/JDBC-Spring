@@ -20,5 +20,6 @@ public interface UserDAO {
     int update (User u) throws SQLException;
     int delete (int uid) throws SQLException;
     User getById (int uid) throws SQLException;
+    User verify(String username,String password) throws SQLException;
        
 }

@@ -66,7 +66,7 @@ public class SQLConstant {
     public final static String USER_UPDATE= " UPDATE " + TableConstant.USER_TABLE +
             " SET firstname=?,lastname=?,username=?,password=?,email=?,phone=?,address=?,role_id=? WHERE UID=? " ;
     public final static String USER_DELETE= " DELETE from " + TableConstant.USER_TABLE + " WHERE uid=? ";
-    
+    public final static String USER_LOGIN= " select * from " +TableConstant.USER_TABLE+ " where username=? and password=?";
    
 
 
@@ -92,4 +92,6 @@ public class SQLConstant {
             //" SET odid=?,pid=?,price=?,oid=?,quantity=? WHERE ODID=? " ;
     public final static String ORDERDETAIL_DELETE= " DELETE from " + TableConstant.ORDERDETAIL_TABLE + " WHERE odid=? ";
 
+    
+    
 }

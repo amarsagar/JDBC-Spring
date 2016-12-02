@@ -79,5 +79,19 @@ public class UserDAOImpl implements UserDAO {
            }
        });
     }
+
+    @Override
+    public User verify(String username, String password) throws SQLException {
+    return (User)jdbcTemplate.queryForObject(SQLConstant.USER_LOGIN, new Object[]{username,password},new RowMapper<User>() {
+
+        @Override
+        public User mapRow(ResultSet rs, int i) throws SQLException {
+           return mapData(rs);
+        }
+    });
+    }
+
+   
+
     
 }

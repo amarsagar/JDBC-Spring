@@ -4,12 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/amar/Documents/NetBeansProjects/cellstation/src/java/com/amar/cellstation/constant/SQLConstant.java</file>
-            <file>file:/C:/Users/amar/Documents/NetBeansProjects/cellstation/web/WEB-INF/jsp/admin/categories/add.jsp</file>
-            <file>file:/C:/Users/amar/Documents/NetBeansProjects/cellstation/src/java/com/amar/cellstation/controller/admin/CategoryController.java</file>
-            <file>file:/C:/Users/amar/Documents/NetBeansProjects/cellstation/web/WEB-INF/jsp/admin/product/edit.jsp</file>
-            <file>file:/C:/Users/amar/Documents/NetBeansProjects/cellstation/web/WEB-INF/jsp/admin/categories/index.jsp</file>
-            <file>file:/C:/Users/amar/Documents/NetBeansProjects/cellstation/web/WEB-INF/jsp/admin/categories/edit.jsp</file>
-            <file>file:/C:/Users/amar/Documents/NetBeansProjects/cellstation/src/java/com/amar/cellstation/controller/admin/ProductController.java</file>
+            <file>file:/C:/Users/amar/Documents/NetBeansProjects/cellstation/web/WEB-INF/jsp/admin/user/add.jsp</file>
+            <file>file:/C:/Users/amar/Documents/NetBeansProjects/cellstation/src/java/com/amar/cellstation/controller/admin/UserController.java</file>
+            <file>file:/C:/Users/amar/Documents/NetBeansProjects/cellstation/web/WEB-INF/jsp/admin/login/login.jsp</file>
+            <file>file:/C:/Users/amar/Documents/NetBeansProjects/cellstation/src/java/com/amar/cellstation/dao/impl/LoginController.java</file>
         </group>
     </open-files>
 </project-private>

@@ -47,5 +47,10 @@ public class UserServiceImpl implements UserService{
     public User getById(int uid) throws SQLException {
     return userDAO.getById(uid);
     }
+
+    @Override
+    public User verify(String username, String password) throws SQLException {
+       return userDAO.verify(username, password);
+    }
     
 }
