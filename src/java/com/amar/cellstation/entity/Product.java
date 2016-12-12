@@ -11,32 +11,27 @@ package com.amar.cellstation.entity;
  */
 public class Product {
     
-    private int pid;
-    private String name;
-    private String Image;
-    private String description;
-    private String added_date;
-    private String status;
-    private int catid;
+    public int pid;
+    public String name;
+    public String Image;
+    public String description;
+    public String added_date;
+    public int catid;
+    public String status;
 
-    
-    
-    
-    public Product(int pid, String name, String Image, String description, String added_date, String status, int catid) {
+    public Product(int pid, String name, String Image, String description, String added_date, int catid, String status) {
         this.pid = pid;
         this.name = name;
         this.Image = Image;
         this.description = description;
         this.added_date = added_date;
-        this.status = status;
         this.catid = catid;
+        this.status = status;
     }
-    
-    public Product(){
-        
-    }
-    
 
+    public Product(){
+    }
+    
     public int getPid() {
         return pid;
     }
@@ -77,14 +72,6 @@ public class Product {
         this.added_date = added_date;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
     public int getCatid() {
         return catid;
     }
@@ -93,10 +80,22 @@ public class Product {
         this.catid = catid;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
-        return "Product{" + "pid=" + pid + ", name=" + name + ", Image=" + Image + ", description=" + description + ", added_date=" + added_date + ", status=" + status + ", catid=" + catid + '}';
+        return "Product{" + "pid=" + pid + ", name=" + name + ", Image=" + Image + ", description=" + description + ", added_date=" + added_date + ", catid=" + catid + ", status=" + status + '}';
     }
+    
+    
+  
+
     
     
     

@@ -45,7 +45,7 @@ public class CategoryController {
     public String save(@ModelAttribute("Category") Category c)throws SQLException {
         try {
             if(c.getCatid()==0){
-                 System.out.println("asdansjdsjd");
+                // System.out.println("asdansjdsjd");
                 categoryService.insert(c);
             }
             else{
@@ -62,6 +62,11 @@ public class CategoryController {
          return "/admin/categories/edit";
          
      }
-    
+     
+     @RequestMapping (value="/delete/{catid}", method=RequestMethod.GET)
+     public String delete(@PathVariable("catid") int catid)throws SQLException{
+         categoryService.delete(catid);
+         return "redirect:/admin/categories";
+     }
     
 }

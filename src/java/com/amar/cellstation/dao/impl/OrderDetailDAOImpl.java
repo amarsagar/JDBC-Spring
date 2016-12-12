@@ -43,16 +43,16 @@ public class OrderDetailDAOImpl implements OrderDetailDAO{
     public OrderDetail mapData(ResultSet rs)throws SQLException{
         OrderDetail orderDetail=new OrderDetail();
         orderDetail.setOdid(rs.getInt("odid"));
-        orderDetail.setOid(rs.getInt("oid"));
         orderDetail.setPid(rs.getInt("pid"));
         orderDetail.setPrice(rs.getInt("price"));
+        orderDetail.setOid(rs.getInt("oid"));
         orderDetail.setQuantity(rs.getInt("quantity"));
         return orderDetail;
     }
     
     @Override
     public int insert(OrderDetail od) throws SQLException {
-        return jdbcTemplate.update(SQLConstant.ORDERDETAIL_INSERT,new Object[]{od.getOdid(),od.getOid(),od.getPid(),od.getPrice(),od.getQuantity()});
+        return jdbcTemplate.update(SQLConstant.ORDERDETAIL_INSERT,new Object[]{od.getOdid(),od.getPid(),od.getPrice(),od.getOid(),od.getQuantity()});
     }
 
     @Override

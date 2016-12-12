@@ -6,6 +6,7 @@
 package com.amar.cellstation.controller.admin;
 
 import com.amar.cellstation.entity.Product;
+import com.amar.cellstation.service.CategoryService;
 import com.amar.cellstation.service.ProductService;
 import java.sql.SQLException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,8 @@ public class ProductController {
     
     @Autowired
     private ProductService productService;
+    @Autowired
+    private CategoryService categoryService;
     
     @RequestMapping(method=RequestMethod.GET)
     public String index(Model map)throws SQLException{
@@ -37,8 +40,10 @@ public class ProductController {
     }
     
     @RequestMapping (value="/add", method=RequestMethod.GET)
-       public String add(Model map) throws SQLException{
+       public String add(Model map,Model model) throws SQLException{
         map.addAttribute("Product" ,new Product());
+        model.addAttribute("catid", categoryService.getALL());//foreignkey
+       // System.out.println(categoryService.getALL());
         return "/admin/product/add";
        }
     
@@ -50,7 +55,7 @@ public class ProductController {
         if(p.getPid()==0){
            // System.out.println("asdansjdsjd");
             productService.insert(p);
-        }
+           }
         else{
 //            System.out.println(p);
 //            System.out.println("I am hre");
@@ -67,6 +72,13 @@ public class ProductController {
 //          System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 //          System.out.println(productService.getById(pid));
           model.addAttribute("Product",productService.getById(pid));
+          model.addAttribute("catid", categoryService.getALL());//foreignkey
           return "/admin/product/edit";
+      }
+      
+      @RequestMapping(value="/delete/{pid}", method=RequestMethod.GET)
+      public String delete(@PathVariable("pid") int pid)throws SQLException{
+          productService.delete(pid);
+          return "redirect:/admin/product";
       }
 }

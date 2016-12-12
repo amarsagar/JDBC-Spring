@@ -78,7 +78,7 @@ public class SQLConstant {
     public final static String ROLE_INSERT= " INSERT  into " + TableConstant.ROLE_TABLE +
             " (role_id,role) VALUES(?,?) " ;
     public final static String ROLE_UPDATE= " UPDATE " + TableConstant.ROLE_TABLE +
-            " SET role_id=?,role=? WHERE role_id=? " ;
+            " SET role=? WHERE role_id=? " ;
     public final static String ROLE_DELETE= " DELETE from " + TableConstant.ROLE_TABLE + " WHERE role_id=? ";
     
     
@@ -87,7 +87,7 @@ public class SQLConstant {
     public final static String ORDERDETAIL_GETALL= " SELECT * from " + TableConstant.ORDERDETAIL_TABLE;
     public final static String ORDERDETAIL_GETById= " SELECT * from " + TableConstant.ORDERDETAIL_TABLE + " WHERE odid=? ";
     public final static String ORDERDETAIL_INSERT= " INSERT  into " + TableConstant.ORDERDETAIL_TABLE +
-            " (odid,pid,price,oid,quantity) VALUES(?,?,?,?,?,?,?,?) " ;
+            " (odid,pid,price,oid,quantity) VALUES(?,?,?,?,?) " ;
    // public final static String ORDERDETAIL_UPDATE= " UPDATE " + TableConstant.ORDERDETAIL_TABLE +
             //" SET odid=?,pid=?,price=?,oid=?,quantity=? WHERE ODID=? " ;
     public final static String ORDERDETAIL_DELETE= " DELETE from " + TableConstant.ORDERDETAIL_TABLE + " WHERE odid=? ";

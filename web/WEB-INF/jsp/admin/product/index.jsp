@@ -16,7 +16,7 @@
                 <td>Image</td>
                 <td>Description</td>
                 <td>Added_Date</td>
-                <td>Cat_Id</td>
+                <td>CatId</td>
                 <td>Status</td>
                 <td>Action</td>
                       

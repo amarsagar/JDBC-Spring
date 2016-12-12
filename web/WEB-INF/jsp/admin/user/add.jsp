@@ -38,12 +38,12 @@
     
     <div class="form-group">
        
-        <label>Role_Id</label>
-        <select name="role_id">     
+        <label>Role</label>
+        <select name="role">     
             <option value="None">---Select---</option>
-             <c:forEach items="${role}" var="roles">
+             <c:forEach items="${role}" var="r">
                  
-                 <option value="${roles.role_id}">${roles.role}</option>
+                 <option value="${r.role}">${r.role}</option>
              </c:forEach>
          </select>
     </div>

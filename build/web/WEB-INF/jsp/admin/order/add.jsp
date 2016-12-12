@@ -5,10 +5,11 @@
       
     <div class="form-group">
         <label> UID</label>
-        <select>
-            <option>1</option>
-            <option>2</option>
-            
+        <select name="uid">
+            <option value="None">---Select---</option>
+            <c:forEach items="${uid}" var="u">
+                <option value="${u.uid}">${u.uid}</option>
+            </c:forEach>           
         </select>
     </div>
     

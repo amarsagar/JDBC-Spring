@@ -8,7 +8,7 @@
     </div>
     <div class="form-group">
         <label>Image</label>
-        <form:input path="image" placeholder="Enter Image" required="required" class="form-control"/>
+        <form:input path="image" type="file" placeholder="Enter Image" required="required" />
     </div>
     
     <div class="form-group">
@@ -20,10 +20,12 @@
         <form:input path="added_date" type="date" placeholder="Enter AddedDate" required="required" class="form-control"/>
     </div>
     <div class="form-group">
-        <label>Cat_Id</label>
-         <select>
-             <option>1</option>
-             <option>2</option>
+        <label>CatId</label>
+          <select name="catid">
+             <option value="none">---Select---</option>
+             <c:forEach items="${catid}" var="c">
+                 <option value="${c.catid}">${c.catid}</option>
+             </c:forEach>
          </select>
     </div>
      

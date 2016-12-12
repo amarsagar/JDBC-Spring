@@ -29,7 +29,7 @@ public class UserController {
     @Autowired
     private UserService userService;
     @Autowired
-    private UserTypeService userTypeService;
+    private UserTypeService userTypeService;//foreign key purpose
     
     @RequestMapping(method=RequestMethod.GET)
     public String index(Model map)throws SQLException{
@@ -43,7 +43,7 @@ public class UserController {
        // User user = new User();
         //map.addAttribute(user);
          
-         model.addAttribute("role",userTypeService.getALL());
+         model.addAttribute("role",userTypeService.getALL()); //for foreign key
 //         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 //         System.out.println(userTypeService.getALL());
          map.addAttribute("User", new User());
@@ -71,7 +71,13 @@ public class UserController {
         @RequestMapping(value = "/edit/{uid}", method = RequestMethod.GET)
         public String edit(@PathVariable("uid") int uid, Model model) throws SQLException{
         model.addAttribute("User",userService.getById(uid));
-        model.addAttribute("role", userTypeService.getALL());
+        model.addAttribute("role", userTypeService.getALL());//for foreign key
           return "/admin/user/edit";
     }
+        
+        @RequestMapping(value="/delete/{uid}",method=RequestMethod.GET)
+        public String delete(@PathVariable("uid") int uid)throws SQLException{
+        userService.delete(uid);
+        return "redirect:/admin/user";
+}
 }

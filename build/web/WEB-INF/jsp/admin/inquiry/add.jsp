@@ -4,12 +4,26 @@
 <form:form modelAttribute="Inquiry" action="${SITE_URL}/admin/inquiry/save" method="post" role="form">
     <div class="form-group">
         <label>PID</label>
-        <form:input path="pid" placeholder="Enter PID" required="required" class="form-control"/>
+           
+        <select name="pid">     
+            <option value="None">---Select---</option>
+             <c:forEach items="${pid}" var="p">
+                 
+                 <option value="${p.pid}">${p.pid}</option>
+             </c:forEach>
+         </select>
     </div>
     
     <div class="form-group">
         <label>UID</label>
-        <form:input path="uid" placeholder="Enter UID" required="required" class="form-control"/>
+          
+        <select name="uid">     
+            <option value="None">---Select---</option>
+             <c:forEach items="${uid}" var="u">
+                 
+                 <option value="${u.uid}">${u.uid}</option>
+             </c:forEach>
+         </select>
     </div>
    
     <div class="form-group">

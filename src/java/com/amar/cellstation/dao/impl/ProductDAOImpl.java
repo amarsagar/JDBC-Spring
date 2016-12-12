@@ -62,7 +62,7 @@ public class ProductDAOImpl implements ProductDAO {
 
     @Override
     public int delete(int pid) throws SQLException {
-        return jdbcTemplate.update(SQLConstant.PRODUCT_INSERT,new Object[]{pid});
+        return jdbcTemplate.update(SQLConstant.PRODUCT_DELETE,new Object[]{pid});
     }
 
     @Override
